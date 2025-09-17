@@ -143,7 +143,7 @@ int main(void)
 		blink_counter = 0;
 
 		// Fast blink
-		for (int i = 0; i < 200; i++)
+		for (int i = 0; i < 100; i++)
 		{
 			HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 			HAL_Delay(100);
@@ -158,14 +158,14 @@ int main(void)
 		// Power restored
 		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);	// LED ON
 		pvd_flag = 0;
-		HAL_Delay(5000);
+		HAL_Delay(3000);
       }
 	else
 	{
 		// Normal operation
 		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-		HAL_Delay(1000);
 		blink_counter += 1;
+		HAL_Delay(1000);
 	}
   }
   /* USER CODE END 3 */
