@@ -156,8 +156,9 @@ int main(void)
 	{
 		check = 2;
 		// Power restored
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);	// LED OFF
+		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);	// LED ON
 		pvd_flag = 0;
+		HAL_Delay(5000);
       }
 	else
 	{
